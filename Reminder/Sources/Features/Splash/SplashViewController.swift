@@ -24,10 +24,12 @@ class SplashViewController: UIViewController {
     }
     
     private func setupContraints() {
-        contentView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        contentView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        NSLayoutConstraint.activate([
+            contentView.topAnchor.constraint(equalTo: view.topAnchor),
+            contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+        ])
         
         contentView.translatesAutoresizingMaskIntoConstraints = false // required for UIKit
     }
