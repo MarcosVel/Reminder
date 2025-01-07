@@ -12,6 +12,7 @@
 		56D6EBF02D2DAD3600CEB750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D6EBEF2D2DAD3600CEB750 /* Assets.xcassets */; };
 		56D6EBFE2D2DB87C00CEB750 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBFD2D2DB87C00CEB750 /* SplashViewController.swift */; };
 		56D6EC002D2DB94400CEB750 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBFF2D2DB94400CEB750 /* SplashView.swift */; };
+		56D6EC042D2DD68D00CEB750 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EC032D2DD68D00CEB750 /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		56D6EBF42D2DAD3600CEB750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56D6EBFD2D2DB87C00CEB750 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		56D6EBFF2D2DB94400CEB750 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		56D6EC032D2DD68D00CEB750 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		56D6EBFB2D2DB85F00CEB750 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				56D6EC012D2DD67700CEB750 /* Constants */,
 				56D6EBFC2D2DB86800CEB750 /* Splash */,
 			);
 			path = Features;
@@ -86,6 +89,22 @@
 				56D6EBFF2D2DB94400CEB750 /* SplashView.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		56D6EC012D2DD67700CEB750 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				56D6EC022D2DD68000CEB750 /* Colors */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		56D6EC022D2DD68000CEB750 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				56D6EC032D2DD68D00CEB750 /* Colors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D6EBFE2D2DB87C00CEB750 /* SplashViewController.swift in Sources */,
+				56D6EC042D2DD68D00CEB750 /* Colors.swift in Sources */,
 				56D6EC002D2DB94400CEB750 /* SplashView.swift in Sources */,
 				56D6EBE72D2DAD3000CEB750 /* AppDelegate.swift in Sources */,
 				56D6EBE92D2DAD3000CEB750 /* SceneDelegate.swift in Sources */,
@@ -297,7 +317,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Reminder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +344,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Reminder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

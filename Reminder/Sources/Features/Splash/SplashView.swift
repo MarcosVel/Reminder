@@ -9,6 +9,23 @@ import Foundation
 import UIKit
 
 class SplashView: UIView {
+    private let logoImageView: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "logo")
+        image.contentMode = .scaleAspectFit
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+    }()
+    
+    private let titleLogoLabel: UILabel = {
+       let label = UILabel()
+        label.text = "Remind"
+        label.textColor = .white
+        label.font = UIFont.boldSystemFont(ofSize: 40)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     init() {
         super.init(frame: .zero)
         setupUI()
@@ -19,11 +36,23 @@ class SplashView: UIView {
     }
     
     private func setupUI() {
-        self.backgroundColor = .yellow
+        self.backgroundColor = .systemRed
+        
+        addSubview(logoImageView)
+        addSubview(titleLogoLabel)
+        
         setupConstraints()
     }
     
     private func setupConstraints() {
-        
+        NSLayoutConstraint.activate([
+            titleLogoLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor, constant: 24),
+            titleLogoLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            
+            logoImageView.trailingAnchor.constraint(equalTo: titleLogoLabel.leadingAnchor, constant: -8),
+            logoImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            logoImageView.heightAnchor.constraint(equalToConstant: 36),
+            logoImageView.widthAnchor.constraint(equalToConstant: 36),
+        ])
     }
 }
