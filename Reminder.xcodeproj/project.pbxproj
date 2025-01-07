@@ -13,6 +13,8 @@
 		56D6EBFE2D2DB87C00CEB750 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBFD2D2DB87C00CEB750 /* SplashViewController.swift */; };
 		56D6EC002D2DB94400CEB750 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBFF2D2DB94400CEB750 /* SplashView.swift */; };
 		56D6EC042D2DD68D00CEB750 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EC032D2DD68D00CEB750 /* Colors.swift */; };
+		56D6EC072D2DE41800CEB750 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EC062D2DE41800CEB750 /* Text.swift */; };
+		56D6EC0A2D2DE66200CEB750 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EC092D2DE66200CEB750 /* Metrics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		56D6EBFD2D2DB87C00CEB750 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		56D6EBFF2D2DB94400CEB750 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		56D6EC032D2DD68D00CEB750 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		56D6EC062D2DE41800CEB750 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		56D6EC092D2DE66200CEB750 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 		56D6EC012D2DD67700CEB750 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				56D6EC082D2DE65700CEB750 /* Metrics */,
+				56D6EC052D2DE40C00CEB750 /* Text */,
 				56D6EC022D2DD68000CEB750 /* Colors */,
 			);
 			path = Constants;
@@ -105,6 +111,22 @@
 				56D6EC032D2DD68D00CEB750 /* Colors.swift */,
 			);
 			path = Colors;
+			sourceTree = "<group>";
+		};
+		56D6EC052D2DE40C00CEB750 /* Text */ = {
+			isa = PBXGroup;
+			children = (
+				56D6EC062D2DE41800CEB750 /* Text.swift */,
+			);
+			path = Text;
+			sourceTree = "<group>";
+		};
+		56D6EC082D2DE65700CEB750 /* Metrics */ = {
+			isa = PBXGroup;
+			children = (
+				56D6EC092D2DE66200CEB750 /* Metrics.swift */,
+			);
+			path = Metrics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +202,8 @@
 				56D6EC042D2DD68D00CEB750 /* Colors.swift in Sources */,
 				56D6EC002D2DB94400CEB750 /* SplashView.swift in Sources */,
 				56D6EBE72D2DAD3000CEB750 /* AppDelegate.swift in Sources */,
+				56D6EC0A2D2DE66200CEB750 /* Metrics.swift in Sources */,
+				56D6EC072D2DE41800CEB750 /* Text.swift in Sources */,
 				56D6EBE92D2DAD3000CEB750 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
