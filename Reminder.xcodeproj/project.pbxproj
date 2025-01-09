@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		562632862D2E347200DB238B /* LoginBSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562632852D2E347200DB238B /* LoginBSViewController.swift */; };
+		562632882D2E351C00DB238B /* LoginBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562632872D2E351C00DB238B /* LoginBottomSheetView.swift */; };
 		56D6EBE72D2DAD3000CEB750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBE62D2DAD3000CEB750 /* AppDelegate.swift */; };
 		56D6EBE92D2DAD3000CEB750 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBE82D2DAD3000CEB750 /* SceneDelegate.swift */; };
 		56D6EBF02D2DAD3600CEB750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D6EBEF2D2DAD3600CEB750 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		562632852D2E347200DB238B /* LoginBSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBSViewController.swift; sourceTree = "<group>"; };
+		562632872D2E351C00DB238B /* LoginBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetView.swift; sourceTree = "<group>"; };
 		56D6EBE32D2DAD3000CEB750 /* Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D6EBE62D2DAD3000CEB750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56D6EBE82D2DAD3000CEB750 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		562632842D2E343300DB238B /* LoginBottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				562632852D2E347200DB238B /* LoginBSViewController.swift */,
+				562632872D2E351C00DB238B /* LoginBottomSheetView.swift */,
+			);
+			path = LoginBottomSheet;
+			sourceTree = "<group>";
+		};
 		56D6EBDA2D2DAD3000CEB750 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +93,7 @@
 		56D6EBFB2D2DB85F00CEB750 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				562632842D2E343300DB238B /* LoginBottomSheet */,
 				56D6EC012D2DD67700CEB750 /* Constants */,
 				56D6EBFC2D2DB86800CEB750 /* Splash */,
 			);
@@ -201,6 +215,8 @@
 				56D6EBFE2D2DB87C00CEB750 /* SplashViewController.swift in Sources */,
 				56D6EC042D2DD68D00CEB750 /* Colors.swift in Sources */,
 				56D6EC002D2DB94400CEB750 /* SplashView.swift in Sources */,
+				562632862D2E347200DB238B /* LoginBSViewController.swift in Sources */,
+				562632882D2E351C00DB238B /* LoginBottomSheetView.swift in Sources */,
 				56D6EBE72D2DAD3000CEB750 /* AppDelegate.swift in Sources */,
 				56D6EC0A2D2DE66200CEB750 /* Metrics.swift in Sources */,
 				56D6EC072D2DE41800CEB750 /* Text.swift in Sources */,
