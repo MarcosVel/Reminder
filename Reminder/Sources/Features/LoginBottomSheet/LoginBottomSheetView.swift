@@ -20,6 +20,7 @@ class LoginBottomSheetView: UIView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "login.label.title".localized
+        label.font = Typography.subHeading
         label.isUserInteractionEnabled = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -28,7 +29,14 @@ class LoginBottomSheetView: UIView {
     private let emailTextField: UITextField = {
         let text = UITextField()
         text.placeholder = "login.email.placeholder".localized
-        text.borderStyle = .roundedRect
+        text.font = Typography.input
+        text.layer.cornerRadius = Metrics.little
+        text.layer.borderColor = Colors.borderBase.cgColor
+        text.layer.borderWidth = 1
+        text.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 0))
+        text.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
+        text.leftViewMode = .always
+        text.rightViewMode = .always
         text.translatesAutoresizingMaskIntoConstraints = false
         return text
     }()
@@ -36,7 +44,14 @@ class LoginBottomSheetView: UIView {
     private let passwordTextField: UITextField = {
         let text = UITextField()
         text.placeholder = "******"
-        text.borderStyle = .roundedRect
+        text.font = Typography.input
+        text.layer.cornerRadius = Metrics.little
+        text.layer.borderColor = Colors.borderBase.cgColor
+        text.layer.borderWidth = 1
+        text.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 0))
+        text.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
+        text.leftViewMode = .always
+        text.rightViewMode = .always
         text.isSecureTextEntry = true
         text.translatesAutoresizingMaskIntoConstraints = false
         return text
@@ -45,8 +60,9 @@ class LoginBottomSheetView: UIView {
     private let loginButton: UIButton = {
         let button = UIButton()
         button.setTitle("login.button.title".localized, for: .normal)
+        button.titleLabel?.font = Typography.subHeading
         button.backgroundColor = Colors.primaryRedBase
-        button.layer.cornerRadius = Metrics.tiny
+        button.layer.cornerRadius = 25
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -70,7 +86,7 @@ class LoginBottomSheetView: UIView {
     
     private func setupUI() {
         self.backgroundColor = .white
-        self.layer.cornerRadius = Metrics.small
+        self.layer.cornerRadius = Metrics.medium
         
         addSubview(handleArea)
         addSubview(titleLabel)
@@ -89,19 +105,22 @@ class LoginBottomSheetView: UIView {
             handleArea.heightAnchor.constraint(equalToConstant: 6),
             
             titleLabel.topAnchor.constraint(equalTo: handleArea.bottomAnchor, constant: Metrics.medium),
-            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
+            titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.large),
             
             emailTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.medium),
-            emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
+            emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.large),
+            emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.large),
+            emailTextField.heightAnchor.constraint(equalToConstant: 56),
             
             passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: Metrics.medium),
-            passwordTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
+            passwordTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.large),
+            passwordTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.large),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 56),
             
-            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: Metrics.medium),
-            loginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
-            loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.medium),
+            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 40),
+            loginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.large),
+            loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.large),
             loginButton.heightAnchor.constraint(equalToConstant: 50),
-
         ])
     }
 }

@@ -13,4 +13,5 @@ public struct Colors {
     static let secondaryRedBase = UIColor(red: 235/255, green: 60/255, blue: 77/255, alpha: 1)
     static let primaryBlueBase = UIColor(red: 51/255, green: 131/255, blue: 220/255, alpha: 1)
     static let secondaryBlueBase = UIColor(red: 110/255, green: 131/255, blue: 236/255, alpha: 1)
+    static let borderBase = UIColor(red: 162/255, green: 185/255, blue: 205/255, alpha: 1)
 }
