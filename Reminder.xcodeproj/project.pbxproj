@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		562632862D2E347200DB238B /* LoginBSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562632852D2E347200DB238B /* LoginBSViewController.swift */; };
 		562632882D2E351C00DB238B /* LoginBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562632872D2E351C00DB238B /* LoginBottomSheetView.swift */; };
+		5626328B2D31C97400DB238B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5626328A2D31C97400DB238B /* Localizable.strings */; };
+		5626328E2D31CA6D00DB238B /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5626328D2D31CA6D00DB238B /* String+Ext.swift */; };
 		56D6EBE72D2DAD3000CEB750 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBE62D2DAD3000CEB750 /* AppDelegate.swift */; };
 		56D6EBE92D2DAD3000CEB750 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EBE82D2DAD3000CEB750 /* SceneDelegate.swift */; };
 		56D6EBF02D2DAD3600CEB750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56D6EBEF2D2DAD3600CEB750 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		562632852D2E347200DB238B /* LoginBSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBSViewController.swift; sourceTree = "<group>"; };
 		562632872D2E351C00DB238B /* LoginBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBottomSheetView.swift; sourceTree = "<group>"; };
+		5626328A2D31C97400DB238B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		5626328D2D31CA6D00DB238B /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		56D6EBE32D2DAD3000CEB750 /* Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56D6EBE62D2DAD3000CEB750 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56D6EBE82D2DAD3000CEB750 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,23 @@
 			path = LoginBottomSheet;
 			sourceTree = "<group>";
 		};
+		562632892D31C93C00DB238B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				56D6EBEF2D2DAD3600CEB750 /* Assets.xcassets */,
+				5626328A2D31C97400DB238B /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5626328C2D31CA5600DB238B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5626328D2D31CA6D00DB238B /* String+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		56D6EBDA2D2DAD3000CEB750 = {
 			isa = PBXGroup;
 			children = (
@@ -73,10 +94,10 @@
 		56D6EBE52D2DAD3000CEB750 /* Reminder */ = {
 			isa = PBXGroup;
 			children = (
+				562632892D31C93C00DB238B /* Resources */,
 				56D6EBFA2D2DB85800CEB750 /* Sources */,
 				56D6EBE62D2DAD3000CEB750 /* AppDelegate.swift */,
 				56D6EBE82D2DAD3000CEB750 /* SceneDelegate.swift */,
-				56D6EBEF2D2DAD3600CEB750 /* Assets.xcassets */,
 				56D6EBF42D2DAD3600CEB750 /* Info.plist */,
 			);
 			path = Reminder;
@@ -85,6 +106,7 @@
 		56D6EBFA2D2DB85800CEB750 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				5626328C2D31CA5600DB238B /* Extensions */,
 				56D6EBFB2D2DB85F00CEB750 /* Features */,
 			);
 			path = Sources;
@@ -202,6 +224,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D6EBF02D2DAD3600CEB750 /* Assets.xcassets in Resources */,
+				5626328B2D31C97400DB238B /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +243,7 @@
 				56D6EBE72D2DAD3000CEB750 /* AppDelegate.swift in Sources */,
 				56D6EC0A2D2DE66200CEB750 /* Metrics.swift in Sources */,
 				56D6EC072D2DE41800CEB750 /* Text.swift in Sources */,
+				5626328E2D31CA6D00DB238B /* String+Ext.swift in Sources */,
 				56D6EBE92D2DAD3000CEB750 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

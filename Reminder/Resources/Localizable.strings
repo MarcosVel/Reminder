@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Reminder
+
+  Created by Marcos Roberto Lemos Veloso on 10/01/25.
+  
+*/
+
+/** MARK: - LOGIN Screen */
+
+"login.label.title" = "Entre para acessar suas receitas";
+"login.email.placeholder" = "email@example.com";
+"login.button.title" = "Entrar";
+
+/** MARK: - HOME Screen */
+
+/** MARK: - RECEIPTS  Screen */
+
+/** MARK: - NEW RECEIPTS Screen */
