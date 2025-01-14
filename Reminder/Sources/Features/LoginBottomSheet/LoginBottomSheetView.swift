@@ -26,6 +26,15 @@ class LoginBottomSheetView: UIView {
         return label
     }()
     
+    private let emailLabel: UILabel = {
+        let label = UILabel()
+        label.text = "login.label.email".localized
+        label.font = Typography.label
+        label.isUserInteractionEnabled = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private let emailTextField: UITextField = {
         let text = UITextField()
         text.placeholder = "login.email.placeholder".localized
@@ -39,6 +48,15 @@ class LoginBottomSheetView: UIView {
         text.rightViewMode = .always
         text.translatesAutoresizingMaskIntoConstraints = false
         return text
+    }()
+    
+    private let passwordLabel: UILabel = {
+        let label = UILabel()
+        label.text = "login.label.password".localized
+        label.font = Typography.label
+        label.isUserInteractionEnabled = true
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
     private let passwordTextField: UITextField = {
@@ -90,7 +108,9 @@ class LoginBottomSheetView: UIView {
         
         addSubview(handleArea)
         addSubview(titleLabel)
+        addSubview(emailLabel)
         addSubview(emailTextField)
+        addSubview(passwordLabel)
         addSubview(passwordTextField)
         addSubview(loginButton)
 
@@ -107,19 +127,25 @@ class LoginBottomSheetView: UIView {
             titleLabel.topAnchor.constraint(equalTo: handleArea.bottomAnchor, constant: Metrics.medium),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.large),
             
-            emailTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Metrics.medium),
+            emailLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 40),
+            emailLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.large),
+            
+            emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: Metrics.small),
             emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.large),
             emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.large),
             emailTextField.heightAnchor.constraint(equalToConstant: 56),
             
-            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: Metrics.medium),
+            passwordLabel.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20),
+            passwordLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.large),
+            
+            passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: Metrics.small),
             passwordTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.large),
             passwordTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.large),
             passwordTextField.heightAnchor.constraint(equalToConstant: 56),
             
-            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 40),
             loginButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.large),
             loginButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Metrics.large),
+            loginButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -40),
             loginButton.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
