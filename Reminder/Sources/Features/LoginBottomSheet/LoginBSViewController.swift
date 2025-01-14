@@ -15,6 +15,7 @@ class LoginBSViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loginView.delegate = self
         setupUI()
         setupGesture()
     }
@@ -53,5 +54,13 @@ class LoginBSViewController: UIViewController {
         }) { _ in
             completion?()
         }
+    }
+}
+
+/** EXTENSIONS  */
+
+extension LoginBSViewController: LoginBSViewDelegate {
+    func sendLoginData(user: String, password: String) {
+        print(user, password)
     }
 }

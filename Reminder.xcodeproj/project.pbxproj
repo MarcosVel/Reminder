@@ -19,6 +19,7 @@
 		56D6EC042D2DD68D00CEB750 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EC032D2DD68D00CEB750 /* Colors.swift */; };
 		56D6EC072D2DE41800CEB750 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EC062D2DE41800CEB750 /* Text.swift */; };
 		56D6EC0A2D2DE66200CEB750 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56D6EC092D2DE66200CEB750 /* Metrics.swift */; };
+		8DDB6D6F2D362BBD00DC53CE /* LoginBSViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB6D6E2D362BB500DC53CE /* LoginBSViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		56D6EC032D2DD68D00CEB750 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		56D6EC062D2DE41800CEB750 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		56D6EC092D2DE66200CEB750 /* Metrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metrics.swift; sourceTree = "<group>"; };
+		8DDB6D6E2D362BB500DC53CE /* LoginBSViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBSViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				562632852D2E347200DB238B /* LoginBSViewController.swift */,
 				562632872D2E351C00DB238B /* LoginBottomSheetView.swift */,
+				8DDB6D6E2D362BB500DC53CE /* LoginBSViewDelegate.swift */,
 			);
 			path = LoginBottomSheet;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				562632882D2E351C00DB238B /* LoginBottomSheetView.swift in Sources */,
 				56D6EBE72D2DAD3000CEB750 /* AppDelegate.swift in Sources */,
 				56D6EC0A2D2DE66200CEB750 /* Metrics.swift in Sources */,
+				8DDB6D6F2D362BBD00DC53CE /* LoginBSViewDelegate.swift in Sources */,
 				56D6EC072D2DE41800CEB750 /* Text.swift in Sources */,
 				5626328E2D31CA6D00DB238B /* String+Ext.swift in Sources */,
 				56D6EBE92D2DAD3000CEB750 /* SceneDelegate.swift in Sources */,
