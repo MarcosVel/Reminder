@@ -22,6 +22,7 @@
 		876129226F2370212EB04419 /* Pods_Reminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A348525DF644D79BA6119F57 /* Pods_Reminder.framework */; };
 		8D28CF332D3A214D001EF3A8 /* LoginBSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28CF322D3A2146001EF3A8 /* LoginBSViewModel.swift */; };
 		8DDB6D6F2D362BBD00DC53CE /* LoginBSViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB6D6E2D362BB500DC53CE /* LoginBSViewDelegate.swift */; };
+		8DECF4E72D3ACE8B0038BD84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DECF4E62D3ACE8B0038BD84 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		8AA9901A5BEC9DF499CF6819 /* Pods-Reminder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminder.debug.xcconfig"; path = "Target Support Files/Pods-Reminder/Pods-Reminder.debug.xcconfig"; sourceTree = "<group>"; };
 		8D28CF322D3A2146001EF3A8 /* LoginBSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBSViewModel.swift; sourceTree = "<group>"; };
 		8DDB6D6E2D362BB500DC53CE /* LoginBSViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBSViewDelegate.swift; sourceTree = "<group>"; };
+		8DECF4E62D3ACE8B0038BD84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A348525DF644D79BA6119F57 /* Pods_Reminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A915DC405F22800475C20561 /* Pods-Reminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminder.release.xcconfig"; path = "Target Support Files/Pods-Reminder/Pods-Reminder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +114,7 @@
 				56D6EBE62D2DAD3000CEB750 /* AppDelegate.swift */,
 				56D6EBE82D2DAD3000CEB750 /* SceneDelegate.swift */,
 				56D6EBF42D2DAD3600CEB750 /* Info.plist */,
+				8DECF4E62D3ACE8B0038BD84 /* GoogleService-Info.plist */,
 			);
 			path = Reminder;
 			sourceTree = "<group>";
@@ -200,7 +203,6 @@
 				8AA9901A5BEC9DF499CF6819 /* Pods-Reminder.debug.xcconfig */,
 				A915DC405F22800475C20561 /* Pods-Reminder.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -266,6 +268,7 @@
 			files = (
 				56D6EBF02D2DAD3600CEB750 /* Assets.xcassets in Resources */,
 				5626328B2D31C97400DB238B /* Localizable.strings in Resources */,
+				8DECF4E72D3ACE8B0038BD84 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,6 +467,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3X2GLAB7N5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Reminder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -492,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3X2GLAB7N5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Reminder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
