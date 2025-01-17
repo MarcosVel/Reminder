@@ -10,6 +10,7 @@ import UIKit
 
 class LoginBSViewController: UIViewController {
     let loginView = LoginBottomSheetView()
+    let viewModel = LoginBSViewModel()
     var handleAreaHeight: CGFloat = 50.0
     
     override func viewDidLoad() {
@@ -61,6 +62,6 @@ class LoginBSViewController: UIViewController {
 
 extension LoginBSViewController: LoginBSViewDelegate {
     func sendLoginData(user: String, password: String) {
-        print(user, password)
+        viewModel.doAuth(userEmail: user, password: password)
     }
 }
