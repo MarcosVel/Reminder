@@ -17,8 +17,8 @@ class LoginBSViewModel {
                 print("Auth Error: \(error)")
                 return
             } else {
-                self?.successResult?()
                 print(authResult, "Auth Success")
+                self?.successResult?()
             }
         }
     }
