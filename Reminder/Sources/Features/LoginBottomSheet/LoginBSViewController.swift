@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class LoginBSViewController: UIViewController {
+    var mainNavigation: UINavigationController?
     let loginView = LoginBottomSheetView()
     let viewModel = LoginBSViewModel()
     var handleAreaHeight: CGFloat = 50.0
@@ -41,7 +42,10 @@ class LoginBSViewController: UIViewController {
     
     private func bindViewModel() {
         viewModel.successResult = { [weak self] in
-                print("Entered view controller")
+            let viewController = UIViewController()
+            viewController.view.backgroundColor = .red
+            self?.dismiss(animated: true)
+            self?.mainNavigation?.pushViewController(viewController, animated: true)
         }
     }
     
