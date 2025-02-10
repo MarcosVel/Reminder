@@ -13,7 +13,6 @@ class FlowController {
     private var navigationController: UINavigationController?
 //    private let viewControllerFactory
     // MARK: - Splash
-    // MARK: - Login
     // MARK: - init
     public init() {
     }
@@ -24,4 +23,15 @@ class FlowController {
         self.navigationController = UINavigationController(rootViewController: startViewController)
         return navigationController
     }
+}
+
+// MARK - Login
+extension FlowController: LoginBSFlowDelegate {
+    func navigateToHome() {
+        self.navigationController?.dismiss(animated: true)
+        let viewController = UIViewController()
+        viewController.view.backgroundColor = .red
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
 }
