@@ -53,7 +53,10 @@ class LoginBSViewController: UIViewController {
     private func bindViewModel() {
         viewModel.successResult = { [weak self] userEmail in
             self?.presentSaveLoginAlert(email: userEmail)
-//            self?.flowDelegate?.navigateToHome()
+        }
+        
+        viewModel.errorResult = { [weak self] errorMessage in
+            self?.presentErrorAlert(message: errorMessage)
         }
     }
     
@@ -71,6 +74,13 @@ class LoginBSViewController: UIViewController {
         }
         
         alertController.addAction(saveAction)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true)
+    }
+    
+    private func presentErrorAlert(message: String) {
+        let alertController = UIAlertController(title: "Erro ao logar", message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .default)
         alertController.addAction(cancelAction)
         self.present(alertController, animated: true)
     }
