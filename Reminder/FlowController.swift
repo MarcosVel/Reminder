@@ -17,7 +17,7 @@ class FlowController {
         self.viewControllerFactory = ViewControllersFactory()
     }
     
-    // MARK - startFlow
+    // MARK: - startFlow
     func start() -> UINavigationController? {
         let startViewController = viewControllerFactory.makeSplashViewController(flowDelegate: self)
         self.navigationController = UINavigationController(rootViewController: startViewController)
@@ -25,7 +25,7 @@ class FlowController {
     }
 }
 
-// MARK - Login
+// MARK: - Login
 extension FlowController: LoginBSFlowDelegate {
     func navigateToHome() {
         self.navigationController?.dismiss(animated: true)
