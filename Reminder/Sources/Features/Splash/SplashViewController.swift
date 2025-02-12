@@ -62,6 +62,7 @@ class SplashViewController: UIViewController {
     
     @objc
     private func showLoginBottomSheet() {
+        animateLogoUp()
         self.flowDelegate?.openLoginBottomSheet()
     }
 }
@@ -73,6 +74,12 @@ extension SplashViewController {
             self.contentView.logoImageView.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
         }, completion: { _ in
             self.decideNavigationFlow()
+        })
+    }
+    
+    private func animateLogoUp() {
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: [.curveEaseOut], animations: {
+            self.contentView.logoImageView.transform = self.contentView.logoImageView.transform.translatedBy(x: 0, y: -130)
         })
     }
 }
