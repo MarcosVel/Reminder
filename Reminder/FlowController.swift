@@ -11,14 +11,15 @@ import UIKit
 class FlowController {
     // MARK: - Properties
     private var navigationController: UINavigationController?
-//    private let viewControllerFactory
+    private let viewControllerFactory: ViewControllersFactoryProtocol
     // MARK: - init
     public init() {
+        self.viewControllerFactory = ViewControllersFactory()
     }
     
     // MARK - startFlow
     func start() -> UINavigationController? {
-        let startViewController = SplashViewController(flowDelegate: self)
+        let startViewController = viewControllerFactory.makeSplashViewController(flowDelegate: self)
         self.navigationController = UINavigationController(rootViewController: startViewController)
         return navigationController
     }
@@ -37,7 +38,7 @@ extension FlowController: LoginBSFlowDelegate {
 // MARK: - Splash
 extension FlowController: SplashFlowDelegate {
     func openLoginBottomSheet() {
-        let loginBottomSheet = LoginBSViewController(flowDelegate: self)
+        let loginBottomSheet = viewControllerFactory.makeLoginBottomSheetViewController(flowDelegate: self)
         loginBottomSheet.modalPresentationStyle = .overCurrentContext
         loginBottomSheet.modalTransitionStyle = .crossDissolve
         navigationController?.present(loginBottomSheet, animated: false) {

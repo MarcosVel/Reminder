@@ -23,6 +23,8 @@
 		8D28CF332D3A214D001EF3A8 /* LoginBSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D28CF322D3A2146001EF3A8 /* LoginBSViewModel.swift */; };
 		8DAF68752D5A637A00DE5858 /* LoginBSFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF68742D5A637A00DE5858 /* LoginBSFlowDelegate.swift */; };
 		8DAF68772D5A73E100DE5858 /* SplashFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF68762D5A73E100DE5858 /* SplashFlowDelegate.swift */; };
+		8DAF687C2D5AF4AE00DE5858 /* ViewControllersFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF687B2D5AF4AE00DE5858 /* ViewControllersFactoryProtocol.swift */; };
+		8DAF687F2D5C067200DE5858 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF687E2D5C067200DE5858 /* ViewControllersFactory.swift */; };
 		8DDB6D6F2D362BBD00DC53CE /* LoginBSViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB6D6E2D362BB500DC53CE /* LoginBSViewDelegate.swift */; };
 		8DECF4F52D3CB8CA0038BD84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DECF4F42D3CB8CA0038BD84 /* GoogleService-Info.plist */; };
 		8DECF4F82D3E19E00038BD84 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DECF4F72D3E19D70038BD84 /* FlowController.swift */; };
@@ -47,6 +49,8 @@
 		8D28CF322D3A2146001EF3A8 /* LoginBSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBSViewModel.swift; sourceTree = "<group>"; };
 		8DAF68742D5A637A00DE5858 /* LoginBSFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBSFlowDelegate.swift; sourceTree = "<group>"; };
 		8DAF68762D5A73E100DE5858 /* SplashFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashFlowDelegate.swift; sourceTree = "<group>"; };
+		8DAF687B2D5AF4AE00DE5858 /* ViewControllersFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactoryProtocol.swift; sourceTree = "<group>"; };
+		8DAF687E2D5C067200DE5858 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
 		8DDB6D6E2D362BB500DC53CE /* LoginBSViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBSViewDelegate.swift; sourceTree = "<group>"; };
 		8DECF4F42D3CB8CA0038BD84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8DECF4F72D3E19D70038BD84 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 		56D6EBFB2D2DB85F00CEB750 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8DAF68782D5AF47900DE5858 /* DependencyInjection */,
 				562632842D2E343300DB238B /* LoginBottomSheet */,
 				56D6EC012D2DD67700CEB750 /* Constants */,
 				56D6EBFC2D2DB86800CEB750 /* Splash */,
@@ -204,6 +209,15 @@
 				8DAF68742D5A637A00DE5858 /* LoginBSFlowDelegate.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8DAF68782D5AF47900DE5858 /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				8DAF687B2D5AF4AE00DE5858 /* ViewControllersFactoryProtocol.swift */,
+				8DAF687E2D5C067200DE5858 /* ViewControllersFactory.swift */,
+			);
+			path = DependencyInjection;
 			sourceTree = "<group>";
 		};
 		DC6D5BAC674237B56DBEDF5F /* Pods */ = {
@@ -331,6 +345,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				56D6EBFE2D2DB87C00CEB750 /* SplashViewController.swift in Sources */,
+				8DAF687C2D5AF4AE00DE5858 /* ViewControllersFactoryProtocol.swift in Sources */,
+				8DAF687F2D5C067200DE5858 /* ViewControllersFactory.swift in Sources */,
 				56D6EC042D2DD68D00CEB750 /* Colors.swift in Sources */,
 				56D6EC002D2DB94400CEB750 /* SplashView.swift in Sources */,
 				562632862D2E347200DB238B /* LoginBSViewController.swift in Sources */,
