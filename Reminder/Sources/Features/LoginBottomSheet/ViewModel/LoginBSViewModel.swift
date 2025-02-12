@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 
 class LoginBSViewModel {
-    var successResult: (() -> Void)?
+    var successResult: ((String) -> Void)?
     
     func doAuth(userEmail: String, password: String) {
         Auth.auth().signIn(withEmail: userEmail, password: password) { [weak self] authResult, error in
@@ -18,7 +18,7 @@ class LoginBSViewModel {
                 return
             } else {
                 print(authResult, "Auth Success")
-                self?.successResult?()
+                self?.successResult?(userEmail)
             }
         }
     }
