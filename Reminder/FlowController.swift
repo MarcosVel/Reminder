@@ -29,8 +29,7 @@ class FlowController {
 extension FlowController: LoginBSFlowDelegate {
     func navigateToHome() {
         self.navigationController?.dismiss(animated: true)
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .red
+        let viewController = viewControllerFactory.makeHomeViewController(flowDelegate: self)
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
@@ -47,9 +46,12 @@ extension FlowController: SplashFlowDelegate {
         
         func navigateToHome() {
             self.navigationController?.dismiss(animated: true)
-            let viewController = UIViewController()
-            viewController.view.backgroundColor = .red
+            let viewController = viewControllerFactory.makeHomeViewController(flowDelegate: self)
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
+}
+
+extension FlowController: HomeFlowDelegate {
+    
 }
