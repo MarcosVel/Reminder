@@ -10,5 +10,5 @@ import Foundation
 protocol ViewControllersFactoryProtocol: AnyObject {
     func makeSplashViewController(flowDelegate: SplashFlowDelegate) -> SplashViewController
     func makeLoginBottomSheetViewController(flowDelegate: LoginBSFlowDelegate) -> LoginBSViewController
-    
+    func makeHomeViewController(flowDelegate: HomeFlowDelegate) -> HomeViewController
 }
