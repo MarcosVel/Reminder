@@ -42,7 +42,7 @@ class LoginBottomSheetView: UIView {
         text.placeholder = "login.email.placeholder".localized
         text.font = Typography.input
         text.layer.cornerRadius = Metrics.little
-        text.layer.borderColor = Colors.borderBase.cgColor
+        text.layer.borderColor = Colors.gray400.cgColor
         text.layer.borderWidth = 1
         text.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 0))
         text.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))
@@ -66,7 +66,7 @@ class LoginBottomSheetView: UIView {
         text.placeholder = "******"
         text.font = Typography.input
         text.layer.cornerRadius = Metrics.little
-        text.layer.borderColor = Colors.borderBase.cgColor
+        text.layer.borderColor = Colors.gray400.cgColor
         text.layer.borderWidth = 1
         text.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 16, height: 0))
         text.rightView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 0))

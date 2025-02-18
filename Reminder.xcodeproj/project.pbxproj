@@ -27,6 +27,10 @@
 		8DAF687F2D5C067200DE5858 /* ViewControllersFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF687E2D5C067200DE5858 /* ViewControllersFactory.swift */; };
 		8DAF68822D5D1D9700DE5858 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF68812D5D1D9300DE5858 /* User.swift */; };
 		8DAF68852D5D208400DE5858 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF68842D5D208400DE5858 /* UserDefaultsManager.swift */; };
+		8DAF688A2D5EE8DC00DE5858 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF68892D5EE8DC00DE5858 /* HomeView.swift */; };
+		8DAF688C2D5EE8E600DE5858 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF688B2D5EE8E600DE5858 /* HomeViewController.swift */; };
+		8DAF688E2D5EE94E00DE5858 /* HomeFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF688D2D5EE94E00DE5858 /* HomeFlowDelegate.swift */; };
+		8DAF68902D5EF54100DE5858 /* ViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF688F2D5EF54100DE5858 /* ViewController+Ext.swift */; };
 		8DDB6D6F2D362BBD00DC53CE /* LoginBSViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB6D6E2D362BB500DC53CE /* LoginBSViewDelegate.swift */; };
 		8DECF4F52D3CB8CA0038BD84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DECF4F42D3CB8CA0038BD84 /* GoogleService-Info.plist */; };
 		8DECF4F82D3E19E00038BD84 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DECF4F72D3E19D70038BD84 /* FlowController.swift */; };
@@ -55,6 +59,10 @@
 		8DAF687E2D5C067200DE5858 /* ViewControllersFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersFactory.swift; sourceTree = "<group>"; };
 		8DAF68812D5D1D9300DE5858 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8DAF68842D5D208400DE5858 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		8DAF68892D5EE8DC00DE5858 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8DAF688B2D5EE8E600DE5858 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8DAF688D2D5EE94E00DE5858 /* HomeFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowDelegate.swift; sourceTree = "<group>"; };
+		8DAF688F2D5EF54100DE5858 /* ViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Ext.swift"; sourceTree = "<group>"; };
 		8DDB6D6E2D362BB500DC53CE /* LoginBSViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBSViewDelegate.swift; sourceTree = "<group>"; };
 		8DECF4F42D3CB8CA0038BD84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8DECF4F72D3E19D70038BD84 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
@@ -98,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				5626328D2D31CA6D00DB238B /* String+Ext.swift */,
+				8DAF688F2D5EF54100DE5858 /* ViewController+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -146,12 +155,11 @@
 		56D6EBFB2D2DB85F00CEB750 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				8DAF68872D5EE8A100DE5858 /* Scenes */,
 				8DAF68832D5D207300DE5858 /* UserDefaults */,
 				8DAF68802D5D1D8D00DE5858 /* Models */,
 				8DAF68782D5AF47900DE5858 /* DependencyInjection */,
-				562632842D2E343300DB238B /* LoginBottomSheet */,
 				56D6EC012D2DD67700CEB750 /* Constants */,
-				56D6EBFC2D2DB86800CEB750 /* Splash */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -240,6 +248,34 @@
 				8DAF68842D5D208400DE5858 /* UserDefaultsManager.swift */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		8DAF68862D5EE85900DE5858 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8DAF68882D5EE8CC00DE5858 /* ViewModel */,
+				8DAF688B2D5EE8E600DE5858 /* HomeViewController.swift */,
+				8DAF688D2D5EE94E00DE5858 /* HomeFlowDelegate.swift */,
+				8DAF68892D5EE8DC00DE5858 /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8DAF68872D5EE8A100DE5858 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				562632842D2E343300DB238B /* LoginBottomSheet */,
+				56D6EBFC2D2DB86800CEB750 /* Splash */,
+				8DAF68862D5EE85900DE5858 /* Home */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8DAF68882D5EE8CC00DE5858 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DC6D5BAC674237B56DBEDF5F /* Pods */ = {
@@ -370,7 +406,9 @@
 				8DAF687C2D5AF4AE00DE5858 /* ViewControllersFactoryProtocol.swift in Sources */,
 				8DAF687F2D5C067200DE5858 /* ViewControllersFactory.swift in Sources */,
 				56D6EC042D2DD68D00CEB750 /* Colors.swift in Sources */,
+				8DAF688E2D5EE94E00DE5858 /* HomeFlowDelegate.swift in Sources */,
 				56D6EC002D2DB94400CEB750 /* SplashView.swift in Sources */,
+				8DAF688C2D5EE8E600DE5858 /* HomeViewController.swift in Sources */,
 				8DAF68852D5D208400DE5858 /* UserDefaultsManager.swift in Sources */,
 				562632862D2E347200DB238B /* LoginBSViewController.swift in Sources */,
 				562632882D2E351C00DB238B /* LoginBottomSheetView.swift in Sources */,
@@ -379,9 +417,11 @@
 				8DECF4F82D3E19E00038BD84 /* FlowController.swift in Sources */,
 				8D28CF332D3A214D001EF3A8 /* LoginBSViewModel.swift in Sources */,
 				8DDB6D6F2D362BBD00DC53CE /* LoginBSViewDelegate.swift in Sources */,
+				8DAF688A2D5EE8DC00DE5858 /* HomeView.swift in Sources */,
 				56D6EC072D2DE41800CEB750 /* Text.swift in Sources */,
 				8DAF68772D5A73E100DE5858 /* SplashFlowDelegate.swift in Sources */,
 				8DAF68822D5D1D9700DE5858 /* User.swift in Sources */,
+				8DAF68902D5EF54100DE5858 /* ViewController+Ext.swift in Sources */,
 				8DAF68752D5A637A00DE5858 /* LoginBSFlowDelegate.swift in Sources */,
 				5626328E2D31CA6D00DB238B /* String+Ext.swift in Sources */,
 				56D6EBE92D2DAD3000CEB750 /* SceneDelegate.swift in Sources */,
