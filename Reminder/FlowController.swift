@@ -53,5 +53,8 @@ extension FlowController: SplashFlowDelegate {
 }
 
 extension FlowController: HomeFlowDelegate {
-    
+    func logout() {
+        self.navigationController?.popViewController(animated: true)
+        self.openLoginBottomSheet()
+    }
 }
