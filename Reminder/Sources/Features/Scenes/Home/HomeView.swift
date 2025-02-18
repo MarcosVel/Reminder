@@ -11,15 +11,16 @@ import UIKit
 class HomeView: UIView {
     let profileBackground: UIView = {
         let view = UIView()
-        view.backgroundColor = .systemGray6
+        view.backgroundColor = Colors.gray600
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     let contentBackground: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = Colors.gray800
         view.layer.cornerRadius = 24
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner] // Top-left & Top-right corners
         view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -29,7 +30,7 @@ class HomeView: UIView {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 32
+        imageView.layer.cornerRadius = Metrics.large
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -37,28 +38,28 @@ class HomeView: UIView {
     let welcomeLabel: UILabel = {
         let label = UILabel()
         label.font = Typography.input
-        label.text = "Boas vindas"
-        label.textColor = .black
+        label.text = "home.welcome.label".localized
+        label.textColor = Colors.gray200
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = Typography.subHeading
+        label.font = Typography.heading
         label.text = "Marcos"
-        label.textColor = .black
+        label.textColor = Colors.gray100
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let feedbackButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Avaliar", for: .normal)
-        button.setTitleColor(.white, for: .normal)
+        button.setTitle("home.feedback.button".localized, for: .normal)
+        button.setTitleColor(Colors.gray800, for: .normal)
         button.titleLabel?.font = Typography.body
-        button.backgroundColor = .black
-        button.layer.cornerRadius = 12
+        button.backgroundColor = Colors.gray100
+        button.layer.cornerRadius = 28
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -66,6 +67,7 @@ class HomeView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
+        self.backgroundColor = Colors.gray600
     }
     
     required init?(coder: NSCoder) {
@@ -110,6 +112,7 @@ class HomeView: UIView {
             feedbackButton.bottomAnchor.constraint(equalTo: contentBackground.bottomAnchor, constant: -40),
             feedbackButton.leadingAnchor.constraint(equalTo: contentBackground.leadingAnchor, constant: 24),
             feedbackButton.trailingAnchor.constraint(equalTo: contentBackground.trailingAnchor, constant: -24),
+            feedbackButton.heightAnchor.constraint(equalToConstant: 56),
         ])
     }
 }
