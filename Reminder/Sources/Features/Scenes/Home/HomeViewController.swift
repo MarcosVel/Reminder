@@ -38,18 +38,11 @@ class HomeViewController: UIViewController {
     
     private func setup() {
         view.addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
         setupContraints()
     }
     
     private func setupContraints() {
-//        setupContentViewToBounds(contentView: contentView)
-        NSLayoutConstraint.activate([
-            contentView.topAnchor.constraint(equalTo: view.topAnchor),
-            contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        setupContentViewToBounds(contentView: contentView)
     }
     
     @objc

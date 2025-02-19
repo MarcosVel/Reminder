@@ -28,8 +28,10 @@ class HomeView: UIView {
     
     let profileImage: UIImageView = {
         let imageView = UIImageView()
+        imageView.isUserInteractionEnabled = true
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
+        imageView.image = UIImage(named: "user")
         imageView.layer.cornerRadius = Metrics.large
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -84,6 +86,7 @@ class HomeView: UIView {
         contentBackground.addSubview(feedbackButton)
         
         setupConstraints()
+        setupImageGesture()
     }
     
     private func setupConstraints() {
@@ -91,9 +94,9 @@ class HomeView: UIView {
             profileBackground.topAnchor.constraint(equalTo: topAnchor),
             profileBackground.leadingAnchor.constraint(equalTo: leadingAnchor),
             profileBackground.trailingAnchor.constraint(equalTo: trailingAnchor),
-            profileBackground.heightAnchor.constraint(equalToConstant: 300),
+            profileBackground.heightAnchor.constraint(equalToConstant: 240),
             
-            profileImage.topAnchor.constraint(equalTo: profileBackground.topAnchor, constant: 48),
+            profileImage.topAnchor.constraint(equalTo: profileBackground.topAnchor, constant: 64),
             profileImage.leadingAnchor.constraint(equalTo: profileBackground.leadingAnchor, constant: 24),
             profileImage.heightAnchor.constraint(equalToConstant: 64),
             profileImage.widthAnchor.constraint(equalToConstant: 64),
@@ -114,5 +117,15 @@ class HomeView: UIView {
             feedbackButton.trailingAnchor.constraint(equalTo: contentBackground.trailingAnchor, constant: -24),
             feedbackButton.heightAnchor.constraint(equalToConstant: 56),
         ])
+    }
+    
+    private func setupImageGesture() {
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(profileImageTapped))
+        profileImage.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc
+    private func profileImageTapped() {
+        print("test")
     }
 }
