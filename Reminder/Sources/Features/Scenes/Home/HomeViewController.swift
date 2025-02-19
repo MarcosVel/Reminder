@@ -38,23 +38,48 @@ class HomeViewController: UIViewController {
     
     private func setup() {
         view.addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
+        contentView.delegate = self
         setupContraints()
     }
     
     private func setupContraints() {
-//        setupContentViewToBounds(contentView: contentView)
-        NSLayoutConstraint.activate([
-            contentView.topAnchor.constraint(equalTo: view.topAnchor),
-            contentView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            contentView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        setupContentViewToBounds(contentView: contentView)
     }
     
     @objc
     private func logoutAction() {
         UserDefaultsManager.removeUser()
         self.flowDelegate?.logout()
+    }
+}
+
+extension HomeViewController: HomeViewDelegate {
+    func didTapProfileImage() {
+        // call method to present image selector
+        selectProfileImage()
+    }
+}
+
+extension HomeViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    private func selectProfileImage() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true)
+    }
+    
+    internal func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let editedImage = info[.editedImage] as? UIImage {
+            contentView.profileImage.image = editedImage
+        } else if let originalImage = info[.originalImage] as? UIImage {
+            contentView.profileImage.image = originalImage
+        }
+        
+        dismiss(animated: true)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
     }
 }
