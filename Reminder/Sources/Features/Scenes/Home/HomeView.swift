@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 class HomeView: UIView {
+    weak public var delegate: HomeViewDelegate?
+    
     let profileBackground: UIView = {
         let view = UIView()
         view.backgroundColor = Colors.gray600
@@ -126,6 +128,6 @@ class HomeView: UIView {
     
     @objc
     private func profileImageTapped() {
-        print("test")
+        delegate?.didTapProfileImage()
     }
 }

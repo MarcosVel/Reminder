@@ -31,6 +31,7 @@
 		8DAF688C2D5EE8E600DE5858 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF688B2D5EE8E600DE5858 /* HomeViewController.swift */; };
 		8DAF688E2D5EE94E00DE5858 /* HomeFlowDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF688D2D5EE94E00DE5858 /* HomeFlowDelegate.swift */; };
 		8DAF68902D5EF54100DE5858 /* ViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF688F2D5EF54100DE5858 /* ViewController+Ext.swift */; };
+		8DAF68922D6578D100DE5858 /* HomeViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAF68912D6578D100DE5858 /* HomeViewDelegate.swift */; };
 		8DDB6D6F2D362BBD00DC53CE /* LoginBSViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB6D6E2D362BB500DC53CE /* LoginBSViewDelegate.swift */; };
 		8DECF4F52D3CB8CA0038BD84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8DECF4F42D3CB8CA0038BD84 /* GoogleService-Info.plist */; };
 		8DECF4F82D3E19E00038BD84 /* FlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DECF4F72D3E19D70038BD84 /* FlowController.swift */; };
@@ -63,6 +64,7 @@
 		8DAF688B2D5EE8E600DE5858 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8DAF688D2D5EE94E00DE5858 /* HomeFlowDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowDelegate.swift; sourceTree = "<group>"; };
 		8DAF688F2D5EF54100DE5858 /* ViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Ext.swift"; sourceTree = "<group>"; };
+		8DAF68912D6578D100DE5858 /* HomeViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewDelegate.swift; sourceTree = "<group>"; };
 		8DDB6D6E2D362BB500DC53CE /* LoginBSViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBSViewDelegate.swift; sourceTree = "<group>"; };
 		8DECF4F42D3CB8CA0038BD84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8DECF4F72D3E19D70038BD84 /* FlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowController.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				8DAF68882D5EE8CC00DE5858 /* ViewModel */,
 				8DAF688B2D5EE8E600DE5858 /* HomeViewController.swift */,
 				8DAF688D2D5EE94E00DE5858 /* HomeFlowDelegate.swift */,
+				8DAF68912D6578D100DE5858 /* HomeViewDelegate.swift */,
 				8DAF68892D5EE8DC00DE5858 /* HomeView.swift */,
 			);
 			path = Home;
@@ -410,6 +413,7 @@
 				56D6EC002D2DB94400CEB750 /* SplashView.swift in Sources */,
 				8DAF688C2D5EE8E600DE5858 /* HomeViewController.swift in Sources */,
 				8DAF68852D5D208400DE5858 /* UserDefaultsManager.swift in Sources */,
+				8DAF68922D6578D100DE5858 /* HomeViewDelegate.swift in Sources */,
 				562632862D2E347200DB238B /* LoginBSViewController.swift in Sources */,
 				562632882D2E351C00DB238B /* LoginBottomSheetView.swift in Sources */,
 				56D6EBE72D2DAD3000CEB750 /* AppDelegate.swift in Sources */,
